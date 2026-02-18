@@ -613,7 +613,7 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import debounce from "lodash.debounce";
 
 // MapboxGL.setAccessToken(
-//   "pk.eyJ1IjoiYW5kdWFsZW1hY3RpdmUiLCJhIjoiY205ZHdkMXJ0MGhlMTJpcXQ4bzgyYjFnZiJ9.Lhg5WUbonFe4mhCmEpSUKg"
+//   process.env.EXPO_PUBLIC_MAPBOX_TOKEN
 // );
 
 const ScheduleDeliveryScreen = () => {
@@ -650,7 +650,7 @@ const ScheduleDeliveryScreen = () => {
   const responsiveWidth = (percentage) => screenWidth * (percentage / 100);
 
   // permission
- useEffect(() => {
+  useEffect(() => {
     // fetchCustomerProfile();
     (async () => {
       const { status } = await Location.requestForegroundPermissionsAsync();
@@ -970,7 +970,7 @@ const ScheduleDeliveryScreen = () => {
         )}
       </View> */}
       {/* react-native-maps */}
-       {/* <View style={styles.locationSection}>
+      {/* <View style={styles.locationSection}>
         <View style={styles.choiceContainer}>
           <TouchableOpacity
             style={[

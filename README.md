@@ -1,50 +1,112 @@
-# Welcome to your Expo app 👋
+# Grocer Delivery Partner App �
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The dedicated mobile application for **Delivery Partners** to manage orders, navigate to customers, and ensure timely deliveries.
 
-## Get started
+This app is a critical component of the **Grocer Ecosystem**, working in tandem with the Customer App and Admin Dashboard to complete the order fulfillment lifecycle.
 
-1. Install dependencies
+## � The Grocer Ecosystem
 
-   ```bash
-   npm install
-   ```
+This repository is part of a 3-part system:
 
-2. Start the app
+1.  **🛒 Customer App:** [GrocerApp](https://github.com/Kalebtes2031/GrocerApp)
+    *   Where customers browse products, place orders, and schedule deliveries.
+2.  **🚚 Delivery App (This Repo):** [GrocerDeliveryApp](https://github.com/Kalebtes2031/GrocerAdminDashboard)
+    *   Where drivers accept assignments, track routes, and confirm deliveries.
+3.  **🖥️ Admin Dashboard:** [GrocerAdminDashboard](https://github.com/Kalebtes2031/GrocerAdminDashboard.git)
+    *   Central control panel for managing users, products, orders, and the entire system.
 
-   ```bash
-    npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🚀 Key Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### � Order Management
+-   **Assigned Orders:** View incoming delivery requests assigned by the system or admin.
+-   **Accepted Orders:** Manage your active delivery queue.
+-   **Order Details:** View comprehensive order information, including customer address, items, and payment status.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 📍 Navigation & Tracking
+-   **Real-Time Tracking:** Integrated **MapLibre** support to track your location relative to the customer.
+-   **Route Optimization:** Efficiently navigate to customer locations for drop-offs.
+-   **Map Interface:** Visual representation of pickup and delivery points.
 
-## Get a fresh project
+### 💼 Driver Workflow
+-   **Availability Status:** Toggle online/offline to control when you receive new orders.
+-   **Order Lifecycle:**
+    1.  **Accept:** Confirm assignment of an order.
+    2.  **Pick Up:** Mark order as collected from the store.
+    3.  **Deliver:** Confirm successful handover to the customer.
+-   **History:** View a log of all completed deliveries ("My Orders").
 
-When you're ready, run:
+### � Profile & Settings
+-   **Profile Management:** Update driver details and profile photo.
+-   **Secure Authentication:** Login securely to access your dashboard.
+
+---
+
+## 🛠️ Tech Stack
+
+-   **Framework:** [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/) (SDK 53)
+-   **Routing:** [Expo Router](https://docs.expo.dev/router/introduction/) (v5)
+-   **Styling:** [NativeWind](https://www.nativewind.dev/) (Tailwind CSS)
+-   **Maps:** MapLibre permissions and rendering.
+-   **State Management:** React Context API (Global, Cart, Auth).
+-   **API Client:** Axios for communication with the Django backend.
+
+---
+
+## ⚙️ Prerequisites
+
+-   **Node.js** (LTS version recommended)
+-   **npm** or **yarn**
+-   **Expo Go** app on your physical device or an Emulator.
+
+## 📦 Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Kalebtes2031/GrocerDeliveryApp.git
+    cd GrocerDeliveryApp
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Configuration:**
+    Create a `.env` file in the root directory by copying the example:
+    ```bash
+    cp .env.example .env
+    ```
+    Populate it with your credentials (API keys, Mapbox Token, etc.):
+    ```env
+    EXPO_PUBLIC_API_URL=https://your-backend-api.com
+    EXPO_PUBLIC_MAPBOX_TOKEN=pk.eyJ1...
+    # See .env.example for full list
+    ```
+
+## 🚀 Running the App
+
+Start the Expo development server:
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+-   **Press `a`** to open in Android Emulator.
+-   **Press `i`** to open in iOS Simulator.
+-   **Scan the QR code** with Expo Go to run on a physical device.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🤝 Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1.  Fork the repository.
+2.  Create a feature branch (`git checkout -b feature/improved-tracking`).
+3.  Commit your changes.
+4.  Push to the branch.
+5.  Open a Pull Request.
 
-## Join the community
+## 📄 License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License.
